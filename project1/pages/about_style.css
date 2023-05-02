@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,500&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1F2937;
+    color: white;
+    padding: 1em;
+}
+
+.header__logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 3rem;
+    margin-right: .3em;
+}
+
+.header__navLink {
+    display: inline-block;
+    margin: .5em;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header__navLink:hover {
+    transform: scale(1.1);
+}
+
+.header__navLink--active {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px #E5E7EB, -2px -2px 5px #E5E7EB;
+}
+
+/* The big picture at the top */
+.topPicture {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-height: 40rem;
+    object-fit: cover;
+    object-position: 0 30%;
+}
+
+/* Who are we section */
+.whoWe {
+    background-color: #1F2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 10rem;
+}
+
+.whoWe__img {
+    width: 40%;
+    max-height: 25rem;
+    object-fit: cover;
+    object-position: 0 65%;
+}
+
+.whoWe__desc,
+.whoWe__desc * {
+    text-align: left;
+    color: white;
+    margin-block: 1em;
+}
+
+.whoWe__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 15rem;
+    width: 45%;
+}
+
+.whoWe__title {
+    font-size: 48px;
+    font-weight: extra-bold;
+}
+
+.whoWe__btn {
+    background-color: #3882F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* What we value section */
+.ouValues {
+    margin-block: 5em;
+}
+
+.ourValues .ourValues__text {
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.ourValues {
+    margin-block: 5em;
+}
+
+.ourValues .ourValues__text {
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.row-of-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row-of-boxes__column {
+    width: 8rem;
+    margin-inline: 5vw;
+}
+
+.row-of-boxes__column:hover {
+    transform: scale(1.2);
+}
+
+.row-of-boxes__picture {
+    border: 5px solid #3882F6;
+    border-radius: 1em;
+    width: 100%;
+    max-height: 8em;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    background-color: #1F2937;
+    height: 60px;
+    color: white;
+}
+
+.footer__text {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 800px) {
+
+    .header * {
+        font-size: .9em;
+    }
+
+    .header__logoContainer {
+        display: block;
+    }
+
+    .header__logo {
+        width: 2rem;
+    }
+
+    .header__logoName {
+        display: none;
+    }
+
+    .whoWe {
+        display: block;
+        position: relative;
+        background-color: #1f293795;
+        padding-inline: .2em;
+    }
+
+    .whoWe__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .whoWe__desc {
+        min-height: auto;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .whoWe__desc * {
+        text-align: center;
+        word-spacing: 2px;
+    }
+
+    .row-of-boxes__column {
+        width: 8rem;
+        margin-inline: 2em;
+    }
+    
+    .row-of-boxes__column:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 490px) {
+    .whoWe__img {
+        width: auto;
+    }
+}
